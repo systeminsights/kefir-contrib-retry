@@ -1,0 +1,42 @@
+{
+  "name": "kefir-contrib-retry",
+  "version": "0.0.1",
+  "description": "Retry kefir observables on error according to a retry policy.",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "in-publish && (mkdir lib && coffee -cbo lib src) || in-install",
+    "postpublish": "rm -rf lib",
+    "test": "mocha --no-colors test/**/*-spec.coffee",
+    "watch": "mocha --no-colors --watch test/**/*-spec.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/systeminsights/kefir-contrib-retry"
+  },
+  "keywords": [
+    "kefir",
+    "retry",
+    "policy"
+  ],
+  "author": "System Insights",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/systeminsights/kefir-contrib-retry/issues"
+  },
+  "homepage": "https://github.com/systeminsights/kefir-contrib-retry",
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "chai-as-promised": "^4.3.0",
+    "coffee-script": "^1.9.1",
+    "fantasy-eithers": "0.0.2",
+    "in-publish": "^1.1.1",
+    "kefir-contrib-run": "0.0.1",
+    "mocha": "^2.2.1",
+    "retry-policy": "0.0.1"
+  },
+  "dependencies": {
+    "kefir": "^1.1.0",
+    "kefir-contrib-fantasy": "0.0.1",
+    "ramda": "^0.11.0"
+  }
+}
